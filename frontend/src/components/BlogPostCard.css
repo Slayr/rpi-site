@@ -1,0 +1,51 @@
+.blog-post-card {
+    background-color: #121212; /* Dark, solid background */
+    border: 1px solid #2a2a2a; /* Subtle border for definition */
+    border-radius: 12px; /* Softer, more modern corners */
+    overflow: hidden; /* Ensures content respects the border-radius */
+    text-align: left;
+    cursor: pointer;
+    transition:
+        transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+        box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+        border-color 0.3s ease;
+    opacity: 0; /* Start invisible for animation */
+}
+
+.blog-post-card.animated-card {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.7); /* Deeper, softer shadow */
+    border-color: #61dafb; /* Highlight with accent color on hover */
+}
+
+.card-content {
+    padding: 25px 30px; /* Generous padding */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure content fills the card */
+}
+
+.blog-post-title {
+    color: #ffffff;
+    font-size: 1.5rem; /* Larger, more impactful title */
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+}
+
+.blog-post-snippet {
+    color: #a0a0a0; /* Softer grey for the snippet */
+    line-height: 1.6;
+    font-size: 1rem;
+    margin: 0;
+    flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
+}
+
+.blog-post-card:hover .read-more-link {
+    color: #ffffff; /* White on hover for better contrast */
+    transform: translateX(4px); /* Slight movement on hover */
+}

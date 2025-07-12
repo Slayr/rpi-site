@@ -1,0 +1,24 @@
+.photography-page {
+  padding: 30px 20px; /* Reduced vertical padding */
+  max-width: 1200px; /* Reduced max-width */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.photography-page h1 {
+  margin-bottom: 40px; /* Reduced margin */
+  color: #ffffff;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0; /* Start invisible for animation */
+}
+
+
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 1.1rem;
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+}

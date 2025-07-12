@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif; /* Modern font stack */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0a; /* Slightly darker black for depth */
+  color: #ffffff; /* All text white */
+  line-height: 1.6;
+  font-size: 16px; /* Reduced base font size */
+}
+
+code {
+  font-family: 'Fira Code', 'Consolas', 'Menlo', 'monospace'; /* Monospace font for code */
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.main-content {
+  padding-top: 70px; /* Adjusted for Navbar height */
+  width: 100%;
+  flex-grow: 1;
+  box-sizing: border-box;
+  /* Removed position: relative and overflow: hidden here to allow normal flow */
+}
+
+/* Basic page styling */
+.landing-page,
+.blog-page,
+.photography-page,
+.admin-page {
+  padding: 40px 40px; /* 40px padding on left/right */
+  width: 100%;
+  max-width: calc(100% - 80px); /* Max width to leave 40px on each side */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #ffffff; /* Pure white for headings */
+  font-size: 2.8rem; /* Reduced font size */
+  font-weight: 700;
+  margin-bottom: 1.2rem; /* Reduced margin */
+}
+
+h2 {
+  color: #ffffff; /* Pure white for subheadings */
+  font-size: 1.8rem; /* Reduced font size */
+  font-weight: 600;
+  margin-bottom: 1rem; /* Reduced margin */
+}
+
+h3 {
+  color: #ffffff; /* Pure white for smaller headings */
+  font-size: 1.5rem; /* Reduced font size */
+  font-weight: 500;
+  margin-bottom: 0.8rem; /* Reduced margin */
+}
+
+p {
+  color: #e0e0e0; /* Slightly off-white for body text */
+}
+
+/* Transition styles for basic fade */
+.route-section {
+  /* Removed position: absolute */
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

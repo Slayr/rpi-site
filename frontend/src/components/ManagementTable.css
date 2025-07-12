@@ -1,0 +1,98 @@
+.management-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #121212; /* Match pane background */
+    table-layout: fixed; /* Force table to respect container width */
+}
+
+.management-table th,
+.management-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #2a2a2a;
+    text-align: left;
+    color: #a0a0a0;
+    vertical-align: middle;
+    word-wrap: break-word; /* Wrap long text */
+    white-space: normal; /* Allow wrapping */
+    font-size: 0.9rem;
+}
+
+/* Define column widths for better layout control */
+.management-table th:nth-child(1) {
+    width: 15%;
+}
+.management-table th:nth-child(2) {
+    width: 40%;
+}
+.management-table th:nth-child(3) {
+    width: 10%;
+}
+.management-table th:nth-child(4) {
+    width: 35%;
+}
+
+.management-table th {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.management-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.management-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.management-table tbody tr:hover {
+    background-color: #1c1c1c;
+}
+
+.management-table td button {
+    padding: 8px 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.management-table td .edit-button {
+    background-color: transparent;
+    color: #61dafb;
+    border-color: #61dafb;
+}
+
+.management-table td .edit-button:hover {
+    background-color: #61dafb;
+    color: #0a0a0a;
+}
+
+.management-table td .delete-button {
+    background-color: transparent;
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.management-table td .delete-button:hover {
+    background-color: #ff6b6b;
+    color: #ffffff;
+}
+
+/* For photo management table */
+.management-table .thumbnail-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    vertical-align: middle;
+}

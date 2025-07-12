@@ -1,0 +1,72 @@
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px); /* Adjust for navbar height */
+  text-align: center;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.landing-title {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  animation: fadeInScale 2s ease-in-out;
+  text-shadow: 0 0 10px rgba(97, 218, 251, 0.2);
+}
+
+.landing-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+  animation: fadeInScale 2.5s ease-in-out;
+}
+
+.orb-links-container {
+  display: flex;
+  gap: 40px; /* Space between orbs */
+  margin-top: 30px;
+  animation: fadeInScale 3s ease-in-out;
+}
+
+.orb-wrapper {
+  position: relative;
+  width: 200px; /* Fixed width for the orb container */
+  height: 200px; /* Fixed height for the orb container */
+  border-radius: 50%; /* Make it circular */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.orb-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+.orb-text {
+  position: absolute;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 3; /* Above the orb */
+  pointer-events: none; /* Allow clicks to pass through to the wrapper */
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

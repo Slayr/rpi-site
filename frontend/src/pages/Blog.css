@@ -1,0 +1,39 @@
+.blog-page {
+  padding: 40px 20px;
+  max-width: 1100px; /* A bit wider for a more spacious layout */
+  margin: 0 auto;
+  text-align: center;
+}
+
+.blog-page h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.blog-intro {
+  font-size: 1.2rem;
+  color: #a0a0a0; /* Softer color for the intro text */
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease-out 0.2s forwards;
+  opacity: 0; /* Start invisible for animation */
+}
+
+.blog-posts-container {
+  display: grid;
+  /* Responsive grid: 1 col on small screens, 2 on medium, 3 on large */
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px; /* Increased gap for a cleaner look */
+}
+
+.error-message {
+  color: #ff6b6b;
+  font-size: 1.1rem;
+  background-color: rgba(255, 107, 107, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: 1px solid #ff6b6b;
+}
